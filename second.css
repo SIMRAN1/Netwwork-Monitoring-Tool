@@ -1,0 +1,21 @@
+body
+{
+	background-image:url("back.png");
+}
+h1
+{text-align:center;
+color:blue;
+}
+.form
+{position:relative;
+margin-left: 40%;
+  margin-top:10%;
+  width:30%;
+  color:blue;
+}
+.button
+{position:relative;
+margin-left: 60%;
+  width:20%;
+  
+}
