@@ -1,0 +1,53 @@
+
+<html>
+<head>
+<link href="second.css" rel="stylesheet" type="text/css" >
+<title>
+signup
+</title>
+</head>
+<body>
+<h1>CREATE A NEW ACCOUNT</h1>
+<div class="form">
+<form action="welcome.php" method="post" >
+	
+
+USERNAME:<input type="text" name="username" placeholder="USERNAME" required><br><br>
+PASSWORD:<input type="password" name="password" placeholder="PASSWORD" required><br><br>
+
+
+
+<input type='submit' >
+
+
+
+</form>
+
+</div>
+<div class="message">
+<?php 
+if($message!="") 
+{ echo $message; }
+else
+{echo "problem in coonection";
+} ?></div>
+
+
+</body>
+
+</html>
+<?php
+$message="";
+
+	$conn = mysqli_connect("localhost","root","","network");
+          
+echo "Connected successfully";
+	$result = mysqli_query($conn,"SELECT * FROM login WHERE username='" . $_POST['username'] . "' and password = '". $_POST['password']."'");
+	$count  = mysqli_num_rows($result);
+	if($count==0) {
+		$message = "Invalid Username or Password!";
+	} else {
+		$message = "You are successfully logged in!";
+	}
+
+?>
