@@ -1,4 +1,7 @@
+<?php
+session_start();
 
+?>
 <html>
 <head>
 <link href="second.css" rel="stylesheet" type="text/css" >
@@ -23,6 +26,15 @@ PASSWORD:<input type="password" name="password" placeholder="PASSWORD" required>
 
 </form>
 
+</div>
+<div>
+<?php
+if(!$_SESSION['login']&&isset($_SESSION['login'])){
+   echo "invalid user";
+   session_unset();
+session_destroy(); 
+}
+?>
 </div>
 
 

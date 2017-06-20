@@ -10,7 +10,7 @@ if(count($_POST)>0) {
 		$message = "You are successfully logged in!";
 	}
 }
-if($count>0)
+if($message=="You are successfully logged in!")
 {exec("sudo /var/www/html/script.sh");
 echo "valid user";
 }

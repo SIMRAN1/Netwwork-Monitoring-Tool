@@ -1,4 +1,11 @@
+<?php
+session_start();
+if (!isset($_SESSION['views'])) { 
+    $_SESSION['views'] = 0;
+}
 
+$_SESSION['views'] = $_SESSION['views']+1;
+?>
 <html>
 <head>
 <link href="second.css" rel="stylesheet" type="text/css" >
@@ -24,30 +31,18 @@ PASSWORD:<input type="password" name="password" placeholder="PASSWORD" required>
 </form>
 
 </div>
-<div class="message">
-<?php 
-if($message!="") 
-{ echo $message; }
-else
-{echo "problem in coonection";
-} ?></div>
+<div>
+<?php
+if(!$_SESSION['login']&&$_SESSION['views']>2){
+   echo "invalid user".$_SESSION['views'];
+   session_unset();
+session_destroy(); 
+}
+?>
+</div>
 
 
 </body>
 
 </html>
-<?php
-$message="";
 
-	$conn = mysqli_connect("localhost","root","","network");
-          
-echo "Connected successfully";
-	$result = mysqli_query($conn,"SELECT * FROM login WHERE username='" . $_POST['username'] . "' and password = '". $_POST['password']."'");
-	$count  = mysqli_num_rows($result);
-	if($count==0) {
-		$message = "Invalid Username or Password!";
-	} else {
-		$message = "You are successfully logged in!";
-	}
-
-?>
