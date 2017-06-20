@@ -1,0 +1,10 @@
+body
+{
+background-image:url("back.png");
+}
+
+#logout
+{position:relative;
+margin-left: 90%;
+ color:blue;
+}

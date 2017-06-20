@@ -1,0 +1,19 @@
+body
+{
+	background-image:url("back.png");
+}
+
+#logout
+{position:relative;
+margin-left: 90%;
+ margin-top:-32%;
+ color:blue;
+}
+#radiobuttons
+{position:relative;
+margin-left: 40%;
+  margin-top:25%;
+   font-size: 200%;
+  width:50%;
+}
+

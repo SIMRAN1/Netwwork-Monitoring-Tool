@@ -4,7 +4,12 @@ session_start();
 ?>
 
 <html>
+<html>
 <head>
+<link href="second.css" rel="stylesheet" type="text/css" >
+<title>
+login
+</title>
 </head>
 <body>
 

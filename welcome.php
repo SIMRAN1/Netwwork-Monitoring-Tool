@@ -4,7 +4,12 @@ session_start();
 ?>
 
 <html>
+<html>
 <head>
+<link href="third.css" rel="stylesheet" type="text/css" >
+<title>
+login
+</title>
 </head>
 <body>
 
@@ -40,7 +45,7 @@ else if(isset($_SESSION['login'])&& $_SESSION['login']==true)
 }
 
 ?>
-<div id="radio buttons">
+<div id="radiobuttons">
 <input type="radio" name="packets" value="male" onclick="location.href='tcp.php'"> TCP/IP<br>
   <input type="radio" name="packets" value="female" onclick="location.href='arp.php'">ARP<br>
   <input type="radio" name="packets" value="other" onclick="location.href='udp.php'"> UDP<br>

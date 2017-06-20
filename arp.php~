@@ -3,7 +3,12 @@ session_start();
 $_SESSION['login']=true;
 ?>
 <html>
+<html>
 <head>
+<link href="fourth.css" rel="stylesheet" type="text/css" >
+<title>
+arp
+</title>
 </head>
 <body>
 WELCOME
@@ -38,6 +43,9 @@ WELCOME
 {
   $selectOption = $_POST['taskOption'];
  echo $_POST['taskOption'];
+}
+else
+{$selectOption = "all";
 }
 if($selectOption=="all")
 {

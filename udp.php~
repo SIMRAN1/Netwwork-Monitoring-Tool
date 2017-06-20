@@ -11,7 +11,7 @@ tcp
 </title>
 </head>
 <body>
-WELCOME
+UDP PACKETS 
 <div id="logout">
 
 <a href="logout.php">Log Out </a>
@@ -40,6 +40,9 @@ WELCOME
    }
 
    $result = mysqli_query($con,"SELECT * FROM iptable");
+   $count  = mysqli_num_rows($result);
+   if( $count>0)
+{
    if(isset($_POST['taskOption']))
 {
   $selectOption = $_POST['taskOption'];
@@ -90,6 +93,10 @@ else
       echo "</tr>";
    }
    echo "</table>";
+}
+}
+else
+{echo "no udp packet exsist";
 }
    mysqli_close($con);
 ?>
