@@ -7,11 +7,11 @@ $_SESSION['login']=true;
 <head>
 <link href="fourth.css" rel="stylesheet" type="text/css" >
 <title>
-tcp
+all packets
 </title>
 </head>
 <body>
-TCP/IP PACKETS 
+ALL PACKETS 
 <div id="logout">
 
 <a href="logout.php">Log Out </a>
@@ -42,7 +42,7 @@ TCP/IP PACKETS
       echo "Failed to connect to MySQL: " . mysqli_connect_error();
    }
 
-   $result = mysqli_query($con,"SELECT * FROM iptable");
+   $result = mysqli_query($con,"SELECT * FROM alltable");
    if(isset($_POST['taskOption']))
 {
   $selectOption = $_POST['taskOption'];

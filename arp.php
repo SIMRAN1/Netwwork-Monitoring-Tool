@@ -16,6 +16,9 @@ ARP PACKETS
 
 <a href="logout.php">Log Out </a>
 </div>
+<div id="back">
+<a href="welcome.php">Back</a>
+</div>
 <form action="" method="post">
 <select name="taskOption">
   <option value="all" <?= $_REQUEST["taskOption"]=="all"?" selected='selected'":"" ?>>all</option>

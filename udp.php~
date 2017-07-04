@@ -16,6 +16,9 @@ UDP PACKETS
 
 <a href="logout.php">Log Out </a>
 </div>
+<div id="back">
+<a href="welcome.php">Back</a>
+</div>
 <form action="" method="post">
 <select name="taskOption">
   <option value="all" <?= $_REQUEST["taskOption"]=="all"?" selected='selected'":"" ?>>all</option>
@@ -39,7 +42,7 @@ UDP PACKETS
       echo "Failed to connect to MySQL: " . mysqli_connect_error();
    }
 
-   $result = mysqli_query($con,"SELECT * FROM iptable");
+   $result = mysqli_query($con,"SELECT * FROM udptable");
    $count  = mysqli_num_rows($result);
    if( $count>0)
 {

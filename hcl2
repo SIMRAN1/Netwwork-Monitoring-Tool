@@ -1,4 +1,2 @@
-14:54:25.659863 ca:25:e1:20:df:98 > 68:a3:c4:4e:2c:bd, ethertype ARP (0x0806), length 42: Request who-has 192.168.43.197 tell 192.168.43.1, length 28
-14:54:25.659891 68:a3:c4:4e:2c:bd > ca:25:e1:20:df:98, ethertype ARP (0x0806), length 42: Reply 192.168.43.197 is-at 68:a3:c4:4e:2c:bd, length 28
-14:54:43.998246 ca:25:e1:20:df:98 > 68:a3:c4:4e:2c:bd, ethertype ARP (0x0806), length 42: Request who-has 192.168.43.197 tell 192.168.43.1, length 28
-14:54:43.998279 68:a3:c4:4e:2c:bd > ca:25:e1:20:df:98, ethertype ARP (0x0806), length 42: Reply 192.168.43.197 is-at 68:a3:c4:4e:2c:bd, length 28
+08:35:59.929045 8c:be:be:38:d8:fd > 68:a3:c4:4e:2c:bd, ethertype ARP (0x0806), length 42: Request who-has 192.168.43.197 tell 192.168.43.1, length 28
+08:35:59.929081 68:a3:c4:4e:2c:bd > 8c:be:be:38:d8:fd, ethertype ARP (0x0806), length 42: Reply 192.168.43.197 is-at 68:a3:c4:4e:2c:bd, length 28

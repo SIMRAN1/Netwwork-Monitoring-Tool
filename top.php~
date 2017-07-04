@@ -7,11 +7,11 @@ $_SESSION['login']=true;
 <head>
 <link href="fourth.css" rel="stylesheet" type="text/css" >
 <title>
-tcp
+top
 </title>
 </head>
 <body>
-TCP/IP PACKETS 
+TOP 5 MACHINES 
 <div id="logout">
 
 <a href="logout.php">Log Out </a>
@@ -22,14 +22,9 @@ TCP/IP PACKETS
 <form action="" method="post">
 <select name="taskOption">
   <option value="all" <?= $_REQUEST["taskOption"]=="all"?" selected='selected'":"" ?>>all</option>
-  <option value="timestamp" <?= $_REQUEST["taskOption"]=="timestamp"?" selected='selected'":"" ?>>timestamp</option>
-  <option value="source_mac" <?= $_REQUEST["taskOption"]=="source_mac"?" selected='selected'":"" ?>>source_mac</option>
-  <option value="des_mac" <?= $_REQUEST["taskOption"]=="des_mac"?" selected='selected'":"" ?>>des_mac</option>
-  <option value="pointer_length" <?= $_REQUEST["taskOption"]=="pointer_length"?" selected='selected'":"" ?>>pointerlength</option>
+  <option value="total" <?= $_REQUEST["taskOption"]=="total"?" selected='selected'":"" ?>>total_packets</option>
   <option value="source_ip" <?= $_REQUEST["taskOption"]=="source_ip"?" selected='selected'":"" ?>>source_ip</option>
-  <option value="des_ip" <?= $_REQUEST["taskOption"]=="des_ip"?" selected='selected'":"" ?>>des_ip</option>
-  <option value="source_port" <?= $_REQUEST["taskOption"]=="source_port"?" selected='selected'":"" ?>>source_port</option>
-  <option value="des_port" <?= $_REQUEST["taskOption"]=="des_port"?" selected='selected'":"" ?>>des_port</option>
+  
   
 </select>
  <input type="submit" name="submit" value="Go"/>
@@ -42,7 +37,7 @@ TCP/IP PACKETS
       echo "Failed to connect to MySQL: " . mysqli_connect_error();
    }
 
-   $result = mysqli_query($con,"SELECT * FROM iptable");
+   $result = mysqli_query($con,"SELECT * FROM top");
    if(isset($_POST['taskOption']))
 {
   $selectOption = $_POST['taskOption'];
@@ -55,26 +50,16 @@ if($selectOption=="all")
 {
    echo "<table border='1'>
       <tr>
-         <th>Timestamp</th>
-         <th>SourceMac</th>
-         <th>DesMac</th>
-         <th>PointerLength</th>
-         <th>SourceIP</th>
-         <th>DesIP</th>
-         <th>SourcePort</th>
-         <th>DesPort</th>
+         <th>Total packets</th>
+         <th>SourceIp</th>
+         
       </tr>";
 
    while($row = mysqli_fetch_array($result)) {
       echo "<tr>";
-      echo "<td>" . $row['timestamp'] . "</td>";
-      echo "<td>" . $row['source_mac'] . "</td>";
-      echo "<td>" . $row['des_mac'] . "</td>";
-      echo "<td>" . $row['pointer_length'] . "</td>";
+      echo "<td>" . $row['total'] . "</td>";
       echo "<td>" . $row['source_ip'] . "</td>";
-      echo "<td>" . $row['des_ip'] . "</td>";
-      echo "<td>" . $row['source_port'] . "</td>";
-      echo "<td>" . $row['des_port'] . "</td>";
+     
       echo "</tr>";
    }
    echo "</table>";

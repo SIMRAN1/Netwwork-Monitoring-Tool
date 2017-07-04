@@ -11,10 +11,13 @@ tcp
 </title>
 </head>
 <body>
-WELCOME
+TCP/IP PACKETS 
 <div id="logout">
 
 <a href="logout.php">Log Out </a>
+</div>
+<div id="back">
+<a href="welcome.php">Back</a>
 </div>
 <form action="" method="post">
 <select name="taskOption">

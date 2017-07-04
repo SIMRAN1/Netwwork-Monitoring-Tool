@@ -49,6 +49,8 @@ else if(isset($_SESSION['login'])&& $_SESSION['login']==true)
 <input type="radio" name="packets" value="male" onclick="location.href='tcp.php'"> TCP/IP<br>
   <input type="radio" name="packets" value="female" onclick="location.href='arp.php'">ARP<br>
   <input type="radio" name="packets" value="other" onclick="location.href='udp.php'"> UDP<br>
+  <input type="radio" name="packets" value="all" onclick="location.href='all.php'">All packets<br>
+  <input type="radio" name="packets" value="top" onclick="location.href='top.php'">Top5<br>
 </div>
 <div id="logout">
 
