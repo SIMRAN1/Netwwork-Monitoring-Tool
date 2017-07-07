@@ -10,7 +10,7 @@ signup
 </title>
 </head>
 <body>
-<h1>CREATE A NEW ACCOUNT</h1>
+<h1>NETWORK MONITORING TOOL</h1>
 <div class="form">
 <form action="welcome.php" method="post" >
 	
@@ -20,7 +20,7 @@ PASSWORD:<input type="password" name="password" placeholder="PASSWORD" required>
 
 
 
-<input type='submit' >
+<input type='submit' value="submit" >
 
 
 
